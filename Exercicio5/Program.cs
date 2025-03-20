@@ -16,7 +16,7 @@
             decimal comissao = valorTotalVendas * (porcentagemComissao / 100);
             decimal salarioFinal = salario + comissao;
 
-            Console.WriteLine($"\nO salário final do vendedor é R${salarioFinal.ToString("F2"}");
+            Console.WriteLine($"\nO salário final do vendedor é R${salarioFinal.ToString("F2")}");
 
         }
     }
