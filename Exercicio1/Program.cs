@@ -15,7 +15,7 @@
 
             float volume = altura * largura * comprimento;
 
-            Console.WriteLine($"\nO volume da caixa é {volume}cm³");
+            Console.WriteLine($"\nO volume da caixa é {volume}cm²");
         }
     }
 }
