@@ -5,13 +5,18 @@
         static void Main(string[] args)
         {
             Console.Write("Insira um número: ");
-            int numero = int.Parse(Console.ReadLine());
-            
-            int sequencia = 0;
+            int numeroElementos = int.Parse(Console.ReadLine());
 
-            for (int i = 0; i <= numero; i++)
+            int elementoAtual = 0;
+            int proximoElemento = 1;
+
+            for (int i = 0; i <= numeroElementos; i++)
             {
-                Console.WriteLine($"{sequencia += i}"); 
+                int soma = elementoAtual + proximoElemento;
+                Console.WriteLine(soma);
+
+                elementoAtual = proximoElemento;
+                proximoElemento = soma;
             }
         }
     }
