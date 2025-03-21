@@ -4,19 +4,30 @@
     {
         static void Main(string[] args)
         {
-            Console.Write("Insira a primeira nota: ");
-            float nota1 = float.Parse(Console.ReadLine());
+            List<decimal> notas = new List<decimal>();
+            List<decimal> inversos = new List<decimal>();
 
-            Console.Write("Insira a segunda nota: ");
-            float nota2 = float.Parse(Console.ReadLine());
+            while (true)
+            {
+                Console.Write("Insira a nota do aluno (ou digite 'sair' para sair): ");
+                string input = Console.ReadLine();
+                if (input.ToLower() == "sair")
+                {
+                    break;
+                }
+                decimal nota = decimal.Parse(input);
+                notas.Add(nota);
+            }
 
-            Console.Write("Insira a terceira nota: ");
-            float nota3 = float.Parse(Console.ReadLine());
+            foreach (decimal nota in notas)
+            {
+                inversos.Add(1 / nota);
+            }
 
-            Console.Write("Insira a quarta nota: ");
-            float nota4 = float.Parse(Console.ReadLine());
+            decimal mediaHarmonica = notas.Count / inversos.Sum();
 
-            float numeroElementos = 4;
+            Console.WriteLine($"A média harmônica das notas é de: {mediaHarmonica.ToString("F1")}");
+
         }
     }
 }
